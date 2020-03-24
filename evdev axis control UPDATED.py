@@ -36,7 +36,7 @@ for event in gamepad.read_loop():
 ##select left trigger            
         elif event.code == 2:
             brake = event.value
-            brake = 90-(90*/1023)
+            brake = 90-(90*brake/1023)
             throttle.write(brake)
 ##select right trigger            
         elif event.code == 5:
